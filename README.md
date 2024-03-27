@@ -19,7 +19,7 @@ To subscribe to an Ethereum address, send a POST request to the `/subscribe` end
 
 Example:
 
-POST /subscribe?address=0x1234567890123456789012345678901234567890
+POST /subscribe?address=0x95222290dd7278aa3ddd389cc1e1d165cc4bafe5
 
 
 ### Retrieving Transactions
@@ -28,7 +28,7 @@ To retrieve transactions associated with a specific Ethereum address, send a GET
 
 Example:
 
-GET /transactions?address=0x1234567890123456789012345678901234567890
+GET /transactions?address=0x95222290dd7278aa3ddd389cc1e1d165cc4bafe5
 
 
 ### Getting the Latest Processed Block
