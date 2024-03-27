@@ -41,4 +41,5 @@ GET /block
 
 ## Business Requirements
 
-![Screenshot 2024-03-27 at 10 39 14](https://github.com/lbozza/eth/assets/21343976/8f68ac58-8df4-4fa0-9f2f-bc3d855de8c2)
+
+![Screenshot 2024-03-27 at 11 05 05](https://github.com/lbozza/ethereumparser/assets/21343976/d323307a-0105-4332-b9c1-ab72088025ae)
