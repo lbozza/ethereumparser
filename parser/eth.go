@@ -5,6 +5,7 @@ import (
 	"eth/domain"
 	"net/http"
 	"strings"
+	"sync"
 )
 
 const (
@@ -17,6 +18,7 @@ const (
 type ETHClient struct {
 	url      string
 	sequence int
+	mu       sync.Mutex
 }
 
 func NewETHClient(url string) *ETHClient {
@@ -58,7 +60,7 @@ func (c *ETHClient) GetBlockByNumber(blockNumber string) (*domain.Block, error) 
 }
 
 func (c *ETHClient) doRequest(method string, params []interface{}) (*http.Response, error) {
-	c.sequence++
+	c.updateSequence()
 	r := domain.Request{
 		JsonRPC: rpcVersion,
 		Method:  method,
@@ -77,6 +79,12 @@ func (c *ETHClient) doRequest(method string, params []interface{}) (*http.Respon
 	}
 
 	return response, err
+}
+
+func (c *ETHClient) updateSequence() {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.sequence++
 }
 
 func closeResponse(response *http.Response) {
