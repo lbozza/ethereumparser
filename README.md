@@ -19,7 +19,7 @@ To subscribe to an Ethereum address, send a POST request to the `/subscribe` end
 
 Example:
 
-POST /subscribe?address=0x1234567890123456789012345678901234567890
+POST /subscribe?address=0x95222290dd7278aa3ddd389cc1e1d165cc4bafe5
 
 
 ### Retrieving Transactions
@@ -28,7 +28,7 @@ To retrieve transactions associated with a specific Ethereum address, send a GET
 
 Example:
 
-GET /transactions?address=0x1234567890123456789012345678901234567890
+GET /transactions?address=0x95222290dd7278aa3ddd389cc1e1d165cc4bafe5
 
 
 ### Getting the Latest Processed Block
@@ -41,4 +41,5 @@ GET /block
 
 ## Business Requirements
 
-![Screenshot 2024-03-27 at 10 39 14](https://github.com/lbozza/eth/assets/21343976/8f68ac58-8df4-4fa0-9f2f-bc3d855de8c2)
+
+![Screenshot 2024-03-27 at 11 05 05](https://github.com/lbozza/ethereumparser/assets/21343976/d323307a-0105-4332-b9c1-ab72088025ae)
